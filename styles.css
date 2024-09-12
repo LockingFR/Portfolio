@@ -98,3 +98,17 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* styles.css */
+#contact p {
+    color: #333; /* Couleur du texte pour s'assurer qu'il est lisible */
+}
+
+#contact a {
+    color: #e74c3c; /* Couleur du lien */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
