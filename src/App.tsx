@@ -1,8 +1,16 @@
 import {useRef} from "react"
-import Autoplay from "embla-carousel-autoplay"
 import DotPattern from "@/components/magicui/dot-pattern";
-import BoxReveal from "@/components/magicui/box-reveal";
 import { Card, CardContent } from "@/components/ui/card"
+import Profile from "@/assets/profile.png"
+import BoxReveal from "@/components/magicui/box-reveal";
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
   CarouselContent,
@@ -10,15 +18,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 
 const accordionItems = [
   {
@@ -57,11 +56,11 @@ function App() {
                     <Card className="overflow-hidden">
                       <AspectRatio ratio={1}>
                         <CardContent className="p-0 overflow-hidden">
-                            <img
-                              src="src/assets/profile.png"
-                              alt="Profile"
-                              className="w-full h-full object-cover"
-                            />
+                          <img
+                            src={Profile}
+                            alt="Profile"
+                            className="w-full h-full object-cover"
+                          />
                         </CardContent>
                       </AspectRatio>
                     </Card>
