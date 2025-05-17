@@ -68,7 +68,7 @@ export default function Home() {
               E-DInamic
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-8 md:mb-12 max-w-2xl mx-auto font-light">
-              Solutions d'automatisation et support informatique pour propulser votre entreprise vers l'avenir
+              Services informatiques personnalisés : réparation PC, montage sur mesure et création de sites web
             </p>
           </motion.div>
 
@@ -155,17 +155,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                title: "Automatisation RPA",
-                description: "Optimisez vos processus métier grâce à l'automatisation robotisée",
-                icon: (
-                  <svg className="w-10 h-10 md:w-12 md:h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                )
-              },
-              {
-                title: "Support Informatique",
-                description: "Une assistance technique réactive et professionnelle pour votre parc informatique",
+                title: "Réparation PC",
+                description: "Diagnostic et réparation de vos ordinateurs, optimisation des performances et maintenance préventive",
                 icon: (
                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -173,11 +164,20 @@ export default function Home() {
                 )
               },
               {
-                title: "EDI EDIFACT",
-                description: "Solutions d'échange de données informatisées pour le secteur logistique",
+                title: "Montage PC",
+                description: "Assemblage sur mesure de votre ordinateur selon vos besoins et votre budget, avec des composants soigneusement sélectionnés",
                 icon: (
                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )
+              },
+              {
+                title: "Création de Sites Web",
+                description: "Conception et développement de sites web modernes, responsifs et personnalisés pour votre entreprise ou projet personnel",
+                icon: (
+                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 )
               }

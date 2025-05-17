@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-50 relative overflow-hidden pt-32">
       {/* Motif de circuit en arrière-plan */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <Image

@@ -22,33 +22,35 @@ export default function Services() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8">Services & Tarifs</h1>
-      
-      <div className="space-y-8">
-        {services.map((service, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-semibold mb-4">{service.category}</h2>
-            <div className="space-y-4">
-              {service.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="flex justify-between items-center border-b pb-2">
-                  <span className="text-gray-800">{item.name}</span>
-                  <span className="text-blue-600 font-semibold">{item.price}</span>
-                </div>
-              ))}
+    <div className="min-h-screen pt-32 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8">Services & Tarifs</h1>
+        
+        <div className="space-y-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-semibold mb-4">{service.category}</h2>
+              <div className="space-y-4">
+                {service.items.map((item, itemIndex) => (
+                  <div key={itemIndex} className="flex justify-between items-center border-b pb-2">
+                    <span className="text-gray-800">{item.name}</span>
+                    <span className="text-blue-600 font-semibold">{item.price}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="mt-12 bg-gray-50 rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4">Informations Importantes</h2>
-        <ul className="space-y-2 text-gray-600">
-          <li>• Les prix indiqués sont TTC</li>
-          <li>• Déplacement possible sur devis</li>
-          <li>• Devis gratuit pour toute intervention</li>
-          <li>• Paiement par CB, espèces ou virement</li>
-        </ul>
+        <div className="mt-12 bg-gray-50 rounded-lg p-6">
+          <h2 className="text-2xl font-semibold mb-4">Informations Importantes</h2>
+          <ul className="space-y-2 text-gray-600">
+            <li>• Les prix indiqués sont TTC</li>
+            <li>• Déplacement possible sur devis</li>
+            <li>• Devis gratuit pour toute intervention</li>
+            <li>• Paiement par CB, espèces ou virement</li>
+          </ul>
+        </div>
       </div>
     </div>
   )
