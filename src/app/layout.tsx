@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${poppins.variable}`}>
       <body className={`${inter.className} antialiased`}>
+        <Navbar />
         <AnimatePresence mode="wait">
           {isLoading ? (
             <motion.div
@@ -50,7 +51,6 @@ export default function RootLayout({
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Navbar />
               <main className="min-h-screen">
                 {children}
               </main>

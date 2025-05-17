@@ -24,10 +24,10 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-500 ${
+      className={`fixed w-full z-[100] transition-all duration-500 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-sm' 
-          : 'bg-transparent'
+          : 'bg-gradient-to-r from-blue-900/90 to-blue-800/90 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-6 py-4">

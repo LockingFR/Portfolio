@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section avec effet de parallaxe */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden -mt-20">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div 
           animate={{ 
             scale: [1, 1.05, 1],
