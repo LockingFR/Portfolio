@@ -24,12 +24,11 @@ export default function Home() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-900"
-          style={{ transform: 'translateZ(0)' }}
+          className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-900/90"
         >
           <motion.div 
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.1 }}
+            animate={{ opacity: 0.3 }}
             transition={{ duration: 1.5 }}
             className="absolute inset-0"
           >
@@ -37,7 +36,7 @@ export default function Home() {
               src="/images/background.png"
               alt="Circuit Pattern"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
               priority
             />
           </motion.div>
