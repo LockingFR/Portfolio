@@ -51,22 +51,22 @@ export default function Contact() {
   }
 
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">Contact</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Contact</h1>
         
         {/* Informations de contact */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-soft p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Coordonnées</h2>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+          <div className="bg-white rounded-xl shadow-soft p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">Coordonnées</h2>
+            <div className="space-y-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4">
                 <div className="bg-primary-50 rounded-lg p-2">
                   <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="font-medium text-gray-800">Téléphone</h3>
                   <a href="tel:0780687630" className="text-primary-600 hover:text-primary-700">
                     07 80 68 76 30
@@ -74,13 +74,13 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4">
                 <div className="bg-primary-50 rounded-lg p-2">
                   <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="font-medium text-gray-800">Email</h3>
                   <a href="mailto:contact@nikolazvoisson.com" className="text-primary-600 hover:text-primary-700">
                     contact@nikolazvoisson.com
@@ -88,14 +88,14 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4">
                 <div className="bg-primary-50 rounded-lg p-2">
                   <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="font-medium text-gray-800">Zone d'intervention</h3>
                   <p className="text-gray-600">
                     Saint-Malo et ses alentours
@@ -106,11 +106,11 @@ export default function Contact() {
           </div>
 
           {/* Formulaire de contact */}
-          <div className="bg-white rounded-xl shadow-soft p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Envoyez-moi un message</h2>
+          <div className="bg-white rounded-xl shadow-soft p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">Envoyez-moi un message</h2>
             
             {status.submitted && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
                 <p className="text-green-600">
                   Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
                 </p>
@@ -118,14 +118,14 @@ export default function Contact() {
             )}
 
             {status.error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-center">
                 <p className="text-red-600">{status.error}</p>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1 text-center md:text-left">
                   Nom complet
                 </label>
                 <input
@@ -141,7 +141,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1 text-center md:text-left">
                   Email
                 </label>
                 <input
@@ -157,7 +157,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1 text-center md:text-left">
                   Sujet
                 </label>
                 <input
@@ -173,7 +173,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1 text-center md:text-left">
                   Message
                 </label>
                 <textarea
@@ -209,10 +209,10 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Carte ou informations supplémentaires */}
-        <div className="bg-white rounded-xl shadow-soft p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Disponibilités</h2>
-          <div className="space-y-4">
+        {/* Section disponibilités */}
+        <div className="bg-white rounded-xl shadow-soft p-6 md:p-8">
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center">Disponibilités</h2>
+          <div className="space-y-4 text-center">
             <p className="text-gray-600">
               Étant actuellement en alternance, mes disponibilités sont flexibles. Je m'adapte à vos besoins et nous conviendrons ensemble d'un créneau qui vous convient.
             </p>
