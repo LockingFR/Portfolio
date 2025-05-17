@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Nikolaz Voisson</title>
+    <link rel="icon" type="image/jpeg" href="pictures/Logo.jpg">
     <style>
         /* Styles généraux */
         :root {
@@ -51,6 +52,20 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 45px;
+            width: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.05);
         }
         
         .logo span {
@@ -335,6 +350,15 @@
                 text-align: center;
             }
             
+            .logo {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
             nav ul {
                 margin-top: 20px;
                 flex-direction: column;
@@ -399,7 +423,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Nikolaz <span>Voisson</span></div>
+                <div class="logo">
+                    <img src="pictures/Logo.jpg" alt="Logo Nikolaz Voisson">
+                    Nikolaz <span>Voisson</span>
+                </div>
                 <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
