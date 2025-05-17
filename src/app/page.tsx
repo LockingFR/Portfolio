@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section avec effet de parallaxe */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden -mt-20">
         <motion.div 
           animate={{ 
             scale: [1, 1.05, 1],
@@ -40,22 +40,6 @@ export default function Home() {
               priority
             />
           </motion.div>
-        </motion.div>
-
-        {/* Logo flottant */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute top-4 left-4 md:top-8 md:left-8 z-20"
-        >
-          <Image
-            src="/images/Logo.jpg"
-            alt="E-DInamic Logo"
-            width={50}
-            height={50}
-            className="rounded-lg shadow-lg md:w-[60px] md:h-[60px]"
-          />
         </motion.div>
 
         {/* Texte flottant avec effet de profondeur */}
