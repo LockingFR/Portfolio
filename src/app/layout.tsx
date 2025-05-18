@@ -33,31 +33,32 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${poppins.variable}`}>
       <body className={`${inter.className} antialiased`}>
-        <Navbar />
-        <AnimatePresence mode="wait">
-          {isLoading ? (
-            <motion.div
-              key="loading"
-              initial={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <LoadingDots />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="content"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <main className="min-h-screen">
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <AnimatePresence mode="wait">
+            {isLoading ? (
+              <motion.div
+                key="loading"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <LoadingDots />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="content"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex-grow pt-16"
+              >
                 {children}
-              </main>
-              <Footer />
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <Footer />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </body>
     </html>
   );

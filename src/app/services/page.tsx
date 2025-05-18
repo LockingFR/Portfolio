@@ -3,79 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import PageBackground from '../components/PageBackground';
 
-// Import des images
-import backgroundImg from '../../pictures/background.png';
-import logoImg from '../../pictures/Logo.jpg';
-import getsImg from '../../pictures/gets.png';
-
-export default function Home() {
+export default function Services() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section avec effet de parallaxe */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.05, 1],
-            rotate: [0, 2, 0]
-          }}
-          transition={{ 
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-900/90"
-        >
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.3 }}
-            transition={{ duration: 1.5 }}
-            className="absolute inset-0"
-          >
-            <Image
-              src="/images/background.png"
-              alt="Circuit Pattern"
-              fill
-              className="object-cover opacity-40"
-              priority
-            />
-          </motion.div>
-        </motion.div>
-
-        {/* Texte flottant avec effet de profondeur */}
-        <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <motion.div
-              animate={{ 
-                y: [-3, 3, -3]
-              }}
-              transition={{ 
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute -top-12 md:-top-20 left-1/2 transform -translate-x-1/2"
-            >
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-400/20 blur-lg" />
-            </motion.div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-4 md:mb-6 tracking-tight">
-              E-DInamic
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-8 md:mb-12 max-w-2xl mx-auto font-light">
-              Services informatiques personnalisés : réparation PC, montage sur mesure et création de sites web
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
+    <PageBackground>
       {/* Section Services avec cartes flottantes */}
-      <section className="py-20 md:py-32 bg-gray-50 relative overflow-hidden">
+      <section className="py-32 md:py-40 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-blue-50/30 to-gray-50">
           <Image
             src="/images/gets.png"
@@ -86,18 +20,12 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12 md:mb-20"
-          >
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Nos Services</h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Des solutions sur mesure pour optimiser votre infrastructure informatique
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
@@ -132,15 +60,7 @@ export default function Home() {
                 href: "/services/web"
               }
             ].map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
-                className="group relative"
-              >
+              <div key={index} className="group relative">
                 <Link href={service.href} className="block">
                   <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
                   <div className="relative bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
@@ -151,11 +71,11 @@ export default function Home() {
                     <p className="text-base md:text-lg text-gray-600">{service.description}</p>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
-    </main>
+    </PageBackground>
   );
 } 
