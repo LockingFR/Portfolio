@@ -65,7 +65,7 @@ export default function Home() {
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-4 md:mb-6 tracking-tight">
-              E-DInamic
+              L'entreprise
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-8 md:mb-12 max-w-2xl mx-auto font-light">
               Services informatiques personnalisés : réparation PC, montage sur mesure et création de sites web

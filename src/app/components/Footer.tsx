@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white mt-16">
+    <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Info */}
@@ -42,7 +42,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/edinamic" className="hover:text-primary-400 transition-colors">
-                  E-DInamic
+                  L'entreprise
                 </Link>
               </li>
               <li>

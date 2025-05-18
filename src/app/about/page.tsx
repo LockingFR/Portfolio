@@ -40,7 +40,7 @@ export default function About() {
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <Image
-                src="/profile.jpg"
+                src="/pictures/profile2.JPEG"
                 alt="Nikolaz Voisson"
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
@@ -220,7 +220,7 @@ export default function About() {
                         <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Entrepreneuriat</span>
                       </div>
                       <h3 className="text-[#33A1FF] text-lg mb-1">2024 - Présent</h3>
-                      <h4 className="text-xl font-bold text-gray-800 mb-2">Fondateur E-DInamic</h4>
+                      <h4 className="text-xl font-bold text-gray-800 mb-2">Fondateur</h4>
                       <p className="text-gray-600">
                         Services d'automatisation (RPA), d'informatisation et support informatique pour TPE/PME.
                         Spécialisation en EDI EDIFACT pour le secteur logistique et transport.
