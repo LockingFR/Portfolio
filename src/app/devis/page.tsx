@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import PageBackground from '../components/PageBackground'
 import { useSearchParams } from 'next/navigation'
+import Image from 'next/image'
 
 export default function Devis() {
   const searchParams = useSearchParams()
@@ -38,16 +39,20 @@ export default function Devis() {
   }
 
   return (
-    <div 
-      className="min-h-screen relative backdrop-blur-[2px]"
-      style={{
-        backgroundImage: 'url("/images/backgrounds/background2.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      <div className="relative">
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/backgrounds/background2.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover blur-[1px]"
+          sizes="100vw"
+          quality={100}
+        />
+      </div>
+
+      <div className="relative z-10">
         <div className="container mx-auto px-6 py-32 md:py-40">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
