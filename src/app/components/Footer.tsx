@@ -110,6 +110,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Nikolaz Voisson. Tous droits réservés.</p>
+          <p className="mt-2 text-gray-400">Version Alpha</p>
         </div>
       </div>
     </footer>

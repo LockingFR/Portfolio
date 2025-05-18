@@ -1,3 +1,11 @@
+import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Services Informatiques',
+  description: 'Services de réparation, diagnostic et montage PC sur mesure. Maintenance et optimisation de vos équipements informatiques.',
+}
+
 export default function ServicesInformatique() {
   return (
     <div className="min-h-screen pt-20 relative overflow-hidden">

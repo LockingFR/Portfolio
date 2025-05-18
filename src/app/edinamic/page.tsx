@@ -1,4 +1,10 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'E-DInamic | L\'entreprise',
+  description: 'Découvrez E-DInamic, votre partenaire informatique à Saint-Malo. Services de réparation, montage PC et solutions web professionnelles.',
+}
 
 export default function EDinamic() {
   return (
@@ -166,7 +172,7 @@ export default function EDinamic() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <div className="hidden md:block absolute top-1/2 left-1/2 h-0.5 bg-blue-200 w-full transform -translate-y-1/2"></div>
+              <div className="hidden md:block absolute top-8 left-[60%] w-full h-0.5 bg-gradient-to-r from-blue-200 to-blue-400"></div>
               <h3 className="text-lg font-medium text-gray-800 mb-2">1. Diagnostic</h3>
               <p className="text-gray-600">Analyse approfondie de votre besoin</p>
             </div>
@@ -176,7 +182,7 @@ export default function EDinamic() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               </div>
-              <div className="hidden md:block absolute top-1/2 left-1/2 h-0.5 bg-blue-200 w-full transform -translate-y-1/2"></div>
+              <div className="hidden md:block absolute top-8 left-[60%] w-full h-0.5 bg-gradient-to-r from-blue-200 to-blue-400"></div>
               <h3 className="text-lg font-medium text-gray-800 mb-2">2. Devis</h3>
               <p className="text-gray-600">Proposition détaillée et transparente</p>
             </div>
@@ -186,11 +192,11 @@ export default function EDinamic() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <div className="hidden md:block absolute top-1/2 left-1/2 h-0.5 bg-blue-200 w-full transform -translate-y-1/2"></div>
+              <div className="hidden md:block absolute top-8 left-[60%] w-full h-0.5 bg-gradient-to-r from-blue-200 to-blue-400"></div>
               <h3 className="text-lg font-medium text-gray-800 mb-2">3. Intervention</h3>
               <p className="text-gray-600">Réalisation professionnelle</p>
             </div>
-            <div className="text-center">
+            <div className="text-center relative">
               <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center relative z-10">
                 <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

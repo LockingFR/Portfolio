@@ -89,7 +89,7 @@ export default function Navbar() {
                       : 'text-white hover:text-white/80 border-transparent hover:border-white'
                 }`}
               >
-                E-DInamic
+                L'entreprise
               </Link>
 
               <div ref={pricingRef} className="relative">
@@ -294,7 +294,7 @@ export default function Navbar() {
                 } transition-colors`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                E-DInamic
+                L'entreprise
               </Link>
 
               {/* Services Informatiques */}
