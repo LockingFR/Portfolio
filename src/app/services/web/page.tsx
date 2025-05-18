@@ -3,6 +3,8 @@
 import PageBackground from '../../components/PageBackground'
 import AnimatedCard from '../../components/AnimatedCard'
 import { GlobeIcon, SparklesIcon, ShieldIcon } from '../../components/icons'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function ServicesWeb() {
   return (
@@ -129,23 +131,36 @@ export default function ServicesWeb() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mb-16">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Un projet web ?</h2>
-            <p className="text-gray-600 mb-6">
-              Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-            >
-              Demander un devis
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="group relative mt-16"
+        >
+          <div className="block">
+            <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
+            <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
+              <div className="flex flex-col md:flex-row items-center justify-between">
+                <div className="text-center md:text-left mb-6 md:mb-0">
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">Un projet web ?</h3>
+                  <p className="text-gray-600">
+                    Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé
+                  </p>
+                </div>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                >
+                  Demander un devis
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </PageBackground>
   )

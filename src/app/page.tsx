@@ -30,15 +30,17 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.3 }}
             transition={{ duration: 1.5 }}
-            className="absolute inset-0"
+            className="absolute inset-0 overflow-hidden"
           >
-            <Image
-              src="/images/background.png"
-              alt="Circuit Pattern"
-              fill
-              className="object-cover opacity-40"
-              priority
-            />
+            <div className="absolute inset-[-10%] scale-110">
+              <Image
+                src="/images/background.png"
+                alt="Circuit Pattern"
+                fill
+                className="object-cover opacity-40"
+                priority
+              />
+            </div>
           </motion.div>
         </motion.div>
 
@@ -153,6 +155,110 @@ export default function Home() {
                 </Link>
               </motion.div>
             ))}
+
+            {/* Call to Action Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              whileHover={{ y: -10 }}
+              className="group relative lg:col-span-3"
+            >
+              <div className="block">
+                <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
+                <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                  <div className="flex flex-col md:flex-row items-center justify-between">
+                    <div className="text-center md:text-left mb-6 md:mb-0">
+                      <h3 className="text-2xl font-semibold text-gray-800 mb-2">Besoin d'une réparation ?</h3>
+                      <p className="text-gray-600">
+                        Contactez-nous pour un diagnostic personnalisé de votre équipement
+                      </p>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    >
+                      Prendre rendez-vous
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Réparation */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center space-y-8">
+            {/* Réparation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="group relative"
+            >
+              <div className="block">
+                <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
+                <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                  <div className="flex flex-col md:flex-row items-center justify-between">
+                    <div className="text-center md:text-left mb-6 md:mb-0">
+                      <h3 className="text-2xl font-semibold text-gray-800 mb-2">Besoin d'une réparation ?</h3>
+                      <p className="text-gray-600">
+                        Contactez-nous pour un diagnostic personnalisé de votre équipement
+                      </p>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    >
+                      Prendre rendez-vous
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Web */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="group relative"
+            >
+              <div className="block">
+                <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
+                <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                  <div className="flex flex-col md:flex-row items-center justify-between">
+                    <div className="text-center md:text-left mb-6 md:mb-0">
+                      <h3 className="text-2xl font-semibold text-gray-800 mb-2">Un projet web ?</h3>
+                      <p className="text-gray-600">
+                        Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé
+                      </p>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    >
+                      Demander un devis
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
