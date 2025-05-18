@@ -65,7 +65,7 @@ export default function Home() {
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-4 md:mb-6 tracking-tight">
-              L'entreprise
+              E-DInamic
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-8 md:mb-12 max-w-2xl mx-auto font-light">
               Services informatiques personnalisés : réparation PC, montage sur mesure et création de sites web
@@ -78,7 +78,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center"
           >
-            <Link href="/services" className="group relative w-full sm:w-auto">
+            <Link href="/services/informatique" className="group relative w-full sm:w-auto">
               <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300" />
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -161,7 +161,8 @@ export default function Home() {
                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                )
+                ),
+                href: "/services/informatique"
               },
               {
                 title: "Montage PC",
@@ -170,7 +171,8 @@ export default function Home() {
                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
-                )
+                ),
+                href: "/services/informatique"
               },
               {
                 title: "Création de Sites Web",
@@ -179,7 +181,8 @@ export default function Home() {
                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
-                )
+                ),
+                href: "/services/web"
               }
             ].map((service, index) => (
               <motion.div
@@ -191,14 +194,16 @@ export default function Home() {
                 whileHover={{ y: -10 }}
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
-                <div className="relative bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
-                  <div className="mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
+                <Link href={service.href} className="block">
+                  <div className="absolute inset-0 bg-blue-400/5 rounded-xl md:rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300" />
+                  <div className="relative bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                    <div className="mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                    <p className="text-base md:text-lg text-gray-600">{service.description}</p>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
-                  <p className="text-base md:text-lg text-gray-600">{service.description}</p>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>

@@ -18,8 +18,8 @@ export default function Legal() {
               <p><strong>Forme juridique :</strong> Entreprise individuelle</p>
               <p><strong>Propriétaire :</strong> Nikolaz Voisson</p>
               <p><strong>Adresse :</strong> Rennes, France</p>
-              <p><strong>Email :</strong> contact@edinamic.fr</p>
-              <p><strong>SIRET :</strong> [Votre numéro SIRET]</p>
+              <p><strong>Email :</strong> contact@nikolazvoisson.com</p>
+              <p><strong>SIRET :</strong> 93315288600018</p>
             </div>
           </section>
 
