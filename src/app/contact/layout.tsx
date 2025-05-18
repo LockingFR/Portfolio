@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact | GETS',
-  description: 'Contactez GETS pour vos projets web et informatiques. Nous sommes à votre écoute pour répondre à vos besoins.',
+  title: 'Contact | E-DInamic',
+  description: 'Contactez E-DInamic pour vos projets web et informatiques. Nous sommes à votre écoute pour répondre à vos besoins.',
 }
 
 export default function ContactLayout({

@@ -1,11 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: {
-    default: 'E-DInamic | Solutions Informatiques',
-    template: '%s | E-DInamic'
-  },
-  description: 'Solutions informatiques professionnelles pour entreprises et particuliers à Saint-Malo',
+  title: 'Accueil | E-DInamic',
+  description: 'Services informatiques personnalisés : réparation PC, montage sur mesure et création de sites web',
   icons: {
     icon: '/new-logo.png',
     shortcut: '/new-logo.png',

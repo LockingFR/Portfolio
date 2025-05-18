@@ -11,9 +11,9 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
-export const metadata: Metadata = {
-  title: 'GETS | Votre partenaire technologique',
-  description: 'GETS - Solutions informatiques et web sur mesure. Services de réparation, développement web et conseil en technologies.',
+export const metadata = {
+  title: 'E-DInamic | Services informatiques personnalisés',
+  description: 'E-DInamic - Services informatiques sur mesure : réparation PC, montage sur mesure et création de sites web',
 }
 
 export default function RootLayout({

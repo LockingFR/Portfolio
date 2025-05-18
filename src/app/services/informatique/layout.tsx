@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Services Informatiques | GETS',
+  title: 'Services Informatiques | E-DInamic',
   description: 'Des solutions complètes pour tous vos besoins en informatique. Diagnostic, réparation et optimisation de vos équipements.',
 }
 

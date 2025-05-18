@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mon Profil',
+  title: 'À propos | E-DInamic',
   description: 'Découvrez mon parcours et mes compétences en tant que professionnel de l\'informatique et développeur web.',
 } 

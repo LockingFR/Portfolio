@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 import LoadingDots from './components/LoadingDots'
+import { usePathname } from 'next/navigation'
 
 export default function Template({
   children,
@@ -10,14 +11,25 @@ export default function Template({
   children: React.ReactNode
 }) {
   const [isLoading, setIsLoading] = useState(true);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
+    if (!isHomePage) {
+      setIsLoading(false);
+      return;
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [isHomePage]);
+
+  if (!isHomePage) {
+    return <>{children}</>;
+  }
 
   return (
     <AnimatePresence mode="wait">
