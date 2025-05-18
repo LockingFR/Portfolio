@@ -1,12 +1,8 @@
-'use client';
-
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import LoadingDots from './components/LoadingDots'
-import { useState, useEffect } from 'react'
-import { AnimatePresence, motion } from 'framer-motion';
+import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({ 
@@ -15,49 +11,23 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
+export const metadata: Metadata = {
+  title: 'GETS | Votre partenaire technologique',
+  description: 'GETS - Solutions informatiques et web sur mesure. Services de réparation, développement web et conseil en technologies.',
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <html lang="fr" className={`${poppins.variable}`}>
       <body className={`${inter.className} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <AnimatePresence mode="wait">
-            {isLoading ? (
-              <motion.div
-                key="loading"
-                initial={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <LoadingDots />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="content"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="flex-grow pt-16"
-              >
-                {children}
-                <Footer />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {children}
+          <Footer />
         </div>
       </body>
     </html>

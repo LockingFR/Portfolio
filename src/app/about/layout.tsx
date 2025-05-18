@@ -1,0 +1,14 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'À propos | GETS',
+  description: 'Découvrez GETS, votre partenaire technologique de confiance. Notre expertise au service de vos projets.',
+}
+
+export default function AboutLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return children
+} 

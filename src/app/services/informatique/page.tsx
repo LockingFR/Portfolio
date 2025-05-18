@@ -1,7 +1,7 @@
 'use client'
 
 import PageBackground from '../../components/PageBackground'
-import { DevicesIcon, ShieldIcon, SparklesIcon, CodeIcon, ServerIcon, DatabaseIcon, ChartIcon, CogIcon, CloudIcon } from '../../components/icons'
+import { DevicesIcon, ShieldIcon, SparklesIcon, CodeIcon, ServerIcon, DatabaseIcon, ChartIcon, CogIcon, CloudIcon } from '../../components/icons/index'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 

@@ -1,10 +1,6 @@
-import Image from 'next/image';
-import { Metadata } from 'next';
+'use client'
 
-export const metadata: Metadata = {
-  title: 'E-DInamic | L\'entreprise',
-  description: 'Découvrez E-DInamic, votre partenaire informatique à Saint-Malo. Services de réparation, montage PC et solutions web professionnelles.',
-}
+import Image from 'next/image';
 
 export default function EDinamic() {
   return (
@@ -29,6 +25,9 @@ export default function EDinamic() {
         <div className="mt-24 bg-white rounded-xl shadow-md p-10">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">Notre Histoire</h2>
           <div className="prose max-w-none text-gray-600">
+            <p className="mb-6">
+              Le nom E-DInamic est né de la fusion entre "EDI" (Échange de Données Informatisé) et "Dynamique", reflétant notre expertise en EDI EDIFACT et notre approche dynamique dans la transformation numérique des entreprises.
+            </p>
             <p className="mb-6">
               Passionné d'informatique depuis mon plus jeune âge, j'ai créé E-DInamic pour offrir des solutions informatiques personnalisées et professionnelles. Notre expertise s'étend de la réparation d'ordinateurs au montage de PC sur mesure.
             </p>
