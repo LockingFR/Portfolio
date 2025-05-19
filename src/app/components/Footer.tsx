@@ -65,15 +65,23 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <span className="text-primary-400 mr-2">•</span>
-                <span>Diagnostic (30€, offert si réparation)</span>
+                <span>Automatisation RPA</span>
               </li>
               <li className="flex items-center">
                 <span className="text-primary-400 mr-2">•</span>
-                <span>Réparation (à partir de 50€)</span>
+                <span>EDI EDIFACT</span>
               </li>
               <li className="flex items-center">
                 <span className="text-primary-400 mr-2">•</span>
-                <span>Montage PC (80€ hors composants)</span>
+                <span>Support Informatique</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-primary-400 mr-2">•</span>
+                <span>Développement Web</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-primary-400 mr-2">•</span>
+                <span>Solutions sur-mesure</span>
               </li>
             </ul>
           </div>
