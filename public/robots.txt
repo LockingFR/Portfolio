@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.edinamic.fr/sitemap.xml
+
+# Optimisé pour le référencement
+Disallow: /api/
+Disallow: /_next/ 

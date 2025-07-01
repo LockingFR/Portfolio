@@ -128,7 +128,7 @@ export default function Navbar() {
                           <h3 className="text-base font-medium text-gray-900 mb-3">Services Informatiques</h3>
                           <div className="space-y-4">
                             <Link
-                              href="/services/informatique"
+                              href="/services/reparation-montage-pc"
                               className="block px-4 py-3 hover:bg-blue-50/50 transition-colors"
                               onClick={() => setIsPricingOpen(false)}
                             >
@@ -136,7 +136,7 @@ export default function Navbar() {
                                 Réparation & Montage PC
                               </div>
                               <div className="text-sm text-gray-500">
-                                Diagnostic, réparation et montage sur mesure
+                                Service professionnel à Saint-Malo
                               </div>
                             </Link>
                           </div>
@@ -299,9 +299,9 @@ export default function Navbar() {
 
               {/* Services Informatiques */}
               <Link
-                href="/services#informatique"
+                href="/services/reparation-montage-pc"
                 className={`block px-3 py-2 text-base font-medium ${
-                  pathname === '/services'
+                  pathname === '/services/reparation-montage-pc'
                     ? 'text-blue-600 bg-blue-50/50'
                     : 'text-gray-900 hover:bg-blue-50/50'
                 } transition-colors`}

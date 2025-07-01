@@ -253,7 +253,11 @@ export default function About() {
               <motion.div className="grid md:grid-cols-[300px_1fr] gap-8 mb-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
                 <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg group bg-white">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <Image src="/pictures/profile2.JPEG" alt="Nikolaz Voisson" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover group-hover:scale-105 transition-transform duration-500" priority quality={95} />
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                    <svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
                 </div>
                 <div className="flex flex-col justify-center space-y-6">
                   <div>
@@ -315,7 +319,7 @@ export default function About() {
 
               {/* Statistiques */}
               <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -327,14 +331,9 @@ export default function About() {
                   <div className="text-sm text-gray-500">Niveau B2 - Avancé</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">2+</div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">5+</div>
                   <div className="text-gray-600">Années d'expérience</div>
                   <div className="text-sm text-gray-500">En développement</div>
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                  <div className="text-4xl font-bold text-green-600 mb-2">12.25</div>
-                  <div className="text-gray-600">Moyenne Bac</div>
-                  <div className="text-sm text-gray-500">Spé NSI & AMC</div>
                 </div>
               </motion.div>
 

@@ -30,24 +30,14 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                title: "Réparation PC",
-                description: "Diagnostic et réparation de vos ordinateurs, optimisation des performances et maintenance préventive",
+                title: "Réparation & Montage PC",
+                description: "Diagnostic, réparation et montage sur mesure de vos ordinateurs. Service professionnel à Saint-Malo",
                 icon: (
                   <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 ),
-                href: "/services/informatique"
-              },
-              {
-                title: "Montage PC",
-                description: "Assemblage sur mesure de votre ordinateur selon vos besoins et votre budget, avec des composants soigneusement sélectionnés",
-                icon: (
-                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                ),
-                href: "/services/informatique"
+                href: "/services/reparation-montage-pc"
               },
               {
                 title: "Création de Sites Web",
